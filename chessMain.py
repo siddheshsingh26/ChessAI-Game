@@ -243,7 +243,7 @@ def drawPieces(screen,board):
 def drawEndGameText(screen,text):
     font=p.font.SysFont("Helvitca",32,True,False)
     textObject=font.render(text,0,p.Color('yellow'))
-    textLocation=p.Rect(0,0,BOARD_WIDTH,BOARD_HEIGHT).move(BOARD_WIDTH/2-textObject.get_BOARD_width()/2,BOARD_HEIGHT/2-textObject.get_BOARD_height()/2)
+    textLocation=p.Rect(0,0,BOARD_WIDTH,BOARD_HEIGHT).move(BOARD_WIDTH/2-textObject.get_width()/2,BOARD_HEIGHT/2-textObject.get_height()/2)
     screen.blit(textObject,textLocation)
     textObject=font.render(text,0,p.Color("Black"))
     screen.blit(textObject,textLocation.move(2,2))
