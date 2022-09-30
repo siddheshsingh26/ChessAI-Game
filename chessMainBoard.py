@@ -18,8 +18,6 @@ DIMENSION = 8
 SQ_SIZE = BOARD_HEIGHT//DIMENSION
 MAX_FPS=60
 IMAGES={}
-print("Enter 1 for 1Player game else 2")
-x=input()
 
 # Initialize a global dictionary of images.This will be called exactly once in the main
 
@@ -50,10 +48,7 @@ def main():
     playerClicks=[]    #keep track of player clicks (two tuples:[(6,4),(4,4)])
     gameOver=False
     playerOne=True   #if an human is plying White
-    if x==1:
-        playerTwo=False
-    else:
-        playerTwo=True
+    playerTwo=False
     AIThinking=False
     moveFinderProcess=None
     moveUndone=False
