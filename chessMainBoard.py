@@ -35,7 +35,7 @@ def main():
     screen=p.display.set_mode((BOARD_WIDTH+MOVE_LOG_PANEL_WIDTH,BOARD_HEIGHT))
     clock=p.time.Clock()
     screen.fill(p.Color("white"))
-    moveLogFont=p.font.SysFont("Arial",16,False,False)
+    moveLogFont=p.font.SysFont("Arial",19,False,False)
     gs=chessEngine.GameState()
 
     validMoves=gs.getValidMoves()
@@ -201,7 +201,7 @@ def drawGameState(screen,gs,validMoves,sqSelected,moveLogFont):
 
 def drawBoard(screen):
     global colors
-    colors=[p.Color("white"),p.Color("gray")]
+    colors=[p.Color("white"),p.Color("sky blue")]
     for r in range(DIMENSION):
         for c in range(DIMENSION):
             color=colors[((r+c)%2)]
@@ -218,7 +218,7 @@ def drawMoveLog(screen,gs,font):
             moveString+=str(moveLog[i+1])
         moveTexts.append(moveString)
 
-    movesPerRow=5
+    movesPerRow=4
     padding=5
     textY=padding
     lineSpacing=2
@@ -227,7 +227,7 @@ def drawMoveLog(screen,gs,font):
         for j in range(movesPerRow):
             if i+j<len(moveTexts):
                 text+=moveTexts[i+j]
-        textObject=font.render(text,True,p.Color('white'))
+        textObject=font.render(text,True,p.Color('light green'))
         textLocation=moveLogRect.move(padding,textY)
         screen.blit(textObject,textLocation)   
         textY+=textObject.get_height() + lineSpacing
