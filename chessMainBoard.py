@@ -29,7 +29,6 @@ def loadImages():
     # Note:we can access an image by saying "IMAGES['wp']"D:\ChessAI\chess\
 
 # the main driver for our code. this will handle user input and updating the graphics
-
 def main():
     p.init()
     screen=p.display.set_mode((BOARD_WIDTH+MOVE_LOG_PANEL_WIDTH,BOARD_HEIGHT))
@@ -48,7 +47,9 @@ def main():
     playerClicks=[]    #keep track of player clicks (two tuples:[(6,4),(4,4)])
     gameOver=False
     playerOne=True   #if an human is plying White
-    playerTwo=False
+    #for 1player game playerTwo=False & for 2Player playerTwo=True
+    playerTwo=True
+    
     AIThinking=False
     moveFinderProcess=None
     moveUndone=False
