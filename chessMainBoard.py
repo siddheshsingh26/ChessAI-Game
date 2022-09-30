@@ -48,7 +48,7 @@ def main():
     gameOver=False
     playerOne=True   #if an human is plying White
     #for 1player game playerTwo=False & for 2Player playerTwo=True
-    playerTwo=True
+    playerTwo=False
     
     AIThinking=False
     moveFinderProcess=None
