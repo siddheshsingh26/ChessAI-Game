@@ -1,5 +1,5 @@
 # this is our main driver file.IT will be responsible for handling user input and displaying the current Game state o
-from os import access
+import sys
 import pygame as p
 import chessEngine,chessAI
 from multiprocessing import Process, Queue
