@@ -1,11 +1,6 @@
-# this is our main driver file.IT will be responsible for handling user input and displaying the current Game state object
-
-from email.mime import image
+# this is our main driver file.IT will be responsible for handling user input and displaying the current Game state o
 from os import access
-from tkinter import SW
-from tkinter.tix import MAX
 from turtle import screensize
-from unittest.result import failfast
 import pygame as p
 import chessEngine,chessAI
 from multiprocessing import Process, Queue
